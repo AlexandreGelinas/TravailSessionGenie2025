@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Repos\\TravailSessionGenie2025\\Les pions\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF3542DF-6401-4C3C-B6E7-1A4C625325A2}|Les pions\\Les pions.csproj|c:\\repos\\travailsessiongenie2025\\les pions\\les pions\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EF3542DF-6401-4C3C-B6E7-1A4C625325A2}|Les pions\\Les pions.csproj|solutionrelative:les pions\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Repos\\TravailSessionGenie2025\\Les pions\\Les pions\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Les pions\\MainWindow.xaml",
+              "ToolTip": "C:\\Repos\\TravailSessionGenie2025\\Les pions\\Les pions\\MainWindow.xaml",
+              "RelativeToolTip": "Les pions\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-02T16:29:49.826Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Les pions (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Les pions (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
