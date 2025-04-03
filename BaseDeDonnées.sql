@@ -80,3 +80,12 @@ CREATE TABLE Evaluation (
 );
 
 -- Il manquerait une table pour les notifications (how the fuck qu'on va faire ca?)
+-- Merci Chat :)
+
+CREATE TABLE Notification (
+    id SERIAL PRIMARY KEY,
+    utilisateur_id INT REFERENCES Utilisateur(id) ON DELETE CASCADE,
+    message TEXT NOT NULL,
+    date_notification TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    est_lu BOOLEAN DEFAULT FALSE
+);
