@@ -34,3 +34,49 @@ CREATE TABLE Match (
     date_match TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     UNIQUE(utilisateur1_id, utilisateur2_id)
 );
+
+-- Possibilité de messagerie?
+
+CREATE TABLE Message (
+    id SERIAL PRIMARY KEY,
+    expediteur_id INT REFERENCES Utilisateur(id) ON DELETE CASCADE,
+    destinataire_id INT REFERENCES Utilisateur(id) ON DELETE CASCADE,
+    contenu TEXT NOT NULL,
+    date_envoi TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Pour tenir un historique? Comme sur messenger
+);
+
+-- ajouté l'interet?
+
+CREATE TABLE Evenement (
+    id SERIAL PRIMARY KEY,
+    createur_id INT REFERENCES Utilisateur(id) ON DELETE CASCADE,
+    titre VARCHAR(255) NOT NULL,
+    detail TEXT, -- Description (est-ce que description est un mot reservé?)
+    date_evenement TIMESTAMP NOT NULL,
+    lieu VARCHAR(255),
+    capacite INT, -- Si c'est dans une salle?
+    date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Pas vraiment nécéssaire?
+);
+
+-- Permet à l'utilsateur de "s'inscrire"
+
+CREATE TABLE Participation (
+    id SERIAL PRIMARY KEY,
+    utilisateur_id INT REFERENCES Utilisateur(id) ON DELETE CASCADE,
+    evenement_id INT REFERENCES Evenement(id) ON DELETE CASCADE,
+    date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(utilisateur_id, evenement_id)
+);
+
+-- Permet à l'utilisateur d'évaluer l'app
+
+CREATE TABLE Evaluation (
+    id SERIAL PRIMARY KEY,
+    evaluateur_id INT REFERENCES Utilisateur(id) ON DELETE CASCADE,
+    evalue_id INT REFERENCES Utilisateur(id) ON DELETE CASCADE,
+    commentaire TEXT,
+    note INT CHECK (note BETWEEN 1 AND 5),
+    date_evaluation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Il manquerait une table pour les notifications (how the fuck qu'on va faire ca?)
