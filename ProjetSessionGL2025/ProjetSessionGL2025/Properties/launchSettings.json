@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ProjetSessionGL2025 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ProjetSessionGL2025 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
